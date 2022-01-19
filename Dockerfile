@@ -26,7 +26,7 @@ FROM riversafe/eze-cli:latest
 
 # # create the dir for test-remote git clone
 # RUN mkdir -p /data/test-remote
-# RUN mkdir -p /data/reports
+RUN mkdir -p /data/reports
 # RUN chown ezeuser /data/test-remote
 
 COPY . .
