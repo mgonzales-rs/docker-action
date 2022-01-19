@@ -27,7 +27,6 @@ WORKDIR /data
 # # create the dir for test-remote git clone
 # RUN mkdir -p /data/test-remote
 # RUN chown ezeuser /data/test-remote
-RUN ls .
 RUN mkdir -p /data/reports
 RUN chown ezeuser /data/reports
 
@@ -39,4 +38,4 @@ USER ezeuser
 
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
-ENTRYPOINT [ "eze", "test" ]
+ENTRYPOINT ["docker","run","--rm","-v","$(pwd","-W):/data","eze-cli","test"]
