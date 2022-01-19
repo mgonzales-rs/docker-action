@@ -28,6 +28,8 @@ RUN useradd --create-home ezeuser
 RUN mkdir -p /data/test-remote
 RUN chown ezeuser /data/test-remote
 
+RUN ls .
+
 # Change User
 USER ezeuser
 
