@@ -27,6 +27,7 @@ WORKDIR /data
 # # create the dir for test-remote git clone
 # RUN mkdir -p /data/test-remote
 # RUN chown ezeuser /data/test-remote
+RUN ls .
 RUN mkdir -p /data/reports
 RUN chown ezeuser /data/reports
 
