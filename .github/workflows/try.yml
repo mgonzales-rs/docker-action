@@ -16,7 +16,7 @@ jobs:
       - name: Try print
         run: |
           echo "soy una taza"
-      - uses: ../action
+      - uses: ./
         with:
           repo-token: 'HOLA12123'
           pr-message: 'ok'
