@@ -10,8 +10,6 @@ jobs:
     name: Check licenses
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          echo "HI"
       # - run: npm install
       - name: Try print
         run: |

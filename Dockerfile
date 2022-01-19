@@ -4,6 +4,15 @@
 FROM python:3.8-slim-buster
 
 #
+# Install apt-get Other Dependencies
+RUN apt-get update \
+    && mkdir -p /usr/share/man/man1 /usr/share/man/man2 \
+    && apt-get install -y --no-install-recommends git curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && echo "Installing Git"
+
+#
 ## install eze
 RUN pip3 install --no-cache-dir eze-cli && echo "Installing Eze"
 
