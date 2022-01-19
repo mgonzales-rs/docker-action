@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           echo "HI"
-      - run: npm install
+      # - run: npm install
       - name: Try print
         run: |
           echo "soy una taza"
