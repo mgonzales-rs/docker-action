@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Print something
         run: |
-          echo "Executing in repository ${{ github.repository }}"
-      - name: "Handling arguments"
+          echo "Executing in repository `${{ github.repository }}`"
+      - name: "Running Dockerfile"
         uses: ./
         with:
           repo-token: 'first_arg_val'
