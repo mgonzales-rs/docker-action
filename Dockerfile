@@ -1,7 +1,27 @@
-FROM node:14.4.0-buster-slim
+# syntax=docker/dockerfile:1
 
-COPY . .
+# base image
+FROM python:3.8-slim-buster
 
-RUN npm install --production
+#
+## install eze
+RUN pip3 install --no-cache-dir eze-cli && echo "Installing Eze"
 
-ENTRYPOINT ["node", "/lib/main.js"]
+#
+# set Work Dir
+WORKDIR /data
+
+#
+# create app user
+RUN useradd --create-home ezeuser
+
+# create the dir for test-remote git clone
+RUN mkdir -p /data/test-remote
+RUN chown ezeuser /data/test-remote
+
+# Change User
+USER ezeuser
+
+# cli eze
+# run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
+RUN eze --version
