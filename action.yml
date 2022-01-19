@@ -1,0 +1,14 @@
+name: 'Docker YML for Github Action '
+description: 'Do something as Docker action'
+author: 'melgon'
+inputs:
+  repo-token:
+    description: 'Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
+    required: true
+  issue-message:
+    description: 'Comment to post on an individual''s first issue'
+  pr-message:
+    description: 'Comment to post on an individual''s first pull request'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
