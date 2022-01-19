@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Check licenses
     steps:
-          - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - run: |
           echo "HI"
       # - run: npm install
