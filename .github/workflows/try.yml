@@ -16,3 +16,9 @@ jobs:
       - name: Try print
         run: |
           echo "soy una taza"
+    steps:
+      - uses: ./action
+        with:
+          repo-token: 'HOLA12123'
+          pr-message: 'ok'
+          # repo-token: ${{ secrets.GITHUB_TOKEN }}
