@@ -7,15 +7,14 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Check licenses
+    name: Running workflow
     steps:
       - uses: actions/checkout@v2
-      # - run: npm install
       - name: Try print
         run: |
           echo "soy una taza"
       - uses: ./
         with:
-          repo-token: 'HOLA12123'
-          pr-message: 'ok'
+          repo-token: 'first_arg_val'
+          pr-message: 'second_arg_val'
           # repo-token: ${{ secrets.GITHUB_TOKEN }}

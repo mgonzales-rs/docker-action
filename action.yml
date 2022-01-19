@@ -1,6 +1,6 @@
 name: 'Docker YML for Github Action '
-description: 'Do something as Docker action'
-author: 'melgon'
+description: 'Running the Dockerfile for Eze testing'
+author: 'riversafe'
 inputs:
   repo-token:
     description: 'Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
