@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Check licenses
     steps:
-      - uses: actions/checkout@v2
+          - uses: actions/checkout@v2
       - run: |
           echo "HI"
       # - run: npm install
       - name: Try print
         run: |
           echo "soy una taza"
-      - uses: ./action
+      - uses: ../action
         with:
           repo-token: 'HOLA12123'
           pr-message: 'ok'
