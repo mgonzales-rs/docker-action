@@ -16,13 +16,13 @@ FROM riversafe/eze-cli:latest
 # ## install eze
 # RUN pip3 install --no-cache-dir eze-cli && echo "Installing Eze"
 
-# #
-# # set Work Dir
-# WORKDIR /data
+#
+# set Work Dir
+WORKDIR /data
 
-# #
-# # create app user
-# RUN useradd --create-home ezeuser
+#
+# create app user
+RUN useradd --create-home ezeuser
 
 # # create the dir for test-remote git clone
 # RUN mkdir -p /data/test-remote
@@ -32,8 +32,8 @@ RUN mkdir -p /data/reports
 COPY . .
 RUN ls .
 
-# # Change User
-# USER ezeuser
+# Change User
+USER ezeuser
 
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"

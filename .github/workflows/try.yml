@@ -1,4 +1,4 @@
-name: Try out
+name: My first Github Actions
 
 on:
   push: {branches: main}
@@ -9,11 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     name: Running workflow
     steps:
-      - uses: actions/checkout@v2
-      - name: Try print
+      - name: Checkout repository code
+        uses: actions/checkout@v2
+      - name: Print something
         run: |
-          echo "soy una taza"
-      - uses: ./
+          echo "Executing in repository ${{ github.repository }}"
+      - name: "Handling arguments"
+        uses: ./
         with:
           repo-token: 'first_arg_val'
           pr-message: 'second_arg_val'
