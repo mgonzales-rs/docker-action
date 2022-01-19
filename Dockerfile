@@ -24,4 +24,4 @@ USER ezeuser
 
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
-RUN eze --version
+ENTRYPOINT [ "eze", "--version" ]
