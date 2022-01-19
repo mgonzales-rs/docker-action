@@ -26,6 +26,7 @@ RUN useradd --create-home ezeuser
 
 # create the dir for test-remote git clone
 RUN mkdir -p /data/test-remote
+RUN mkdir -p /data/reports
 RUN chown ezeuser /data/test-remote
 
 COPY . .
