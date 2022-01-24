@@ -41,4 +41,4 @@ USER ezeuser
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
 ENTRYPOINT [ "sh", "-c" ]
-CMD "cd /data"
+CMD "cd /data && eze test"
