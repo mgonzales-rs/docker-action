@@ -18,11 +18,11 @@ REQUIREMENTS_FILES = [
     "requirements.txt"
 ]
 IGNORE_BELOW_SEVERITY = "medium"
-REPORT_FILE = "reports/safety-report.json"
+REPORT_FILE = "safety-report.json"
 
 [semgrep]
 PRINT_TIMING_INFO = false
-REPORT_FILE = "reports/semgrep-report.json"
+REPORT_FILE = "semgrep-report.json"
 EXCLUDE = [
     "tests",
     "tests-integration"
@@ -34,26 +34,26 @@ CONFIGS = [
 
 [trufflehog]
 SOURCE = "."
-REPORT_FILE = "reports/truffleHog-report.json"
+REPORT_FILE = "truffleHog-report.json"
 
 [python-cyclonedx]
 REQUIREMENTS_FILE = "requirements.txt"
-REPORT_FILE = "reports/python-cyclonedx-bom.json"
+REPORT_FILE = "python-cyclonedx-bom.json"
 
 # ========================================
 # REPORT CONFIG
 # ========================================
 [bom]
-REPORT_FILE = "reports/report-cyclonedx-sbom.json"
+REPORT_FILE = "report-cyclonedx-sbom.json"
 
 [console]
 PRINT_SUMMARY_ONLY = true
 
 [json]
-REPORT_FILE = "reports/eze_report.json"
+REPORT_FILE = "eze_report.json"
 
 [sarif]
-REPORT_FILE = "reports/eze_report.sarif"
+REPORT_FILE = "eze_report.sarif"
 
 # ========================================
 # SCAN CONFIG
