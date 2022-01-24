@@ -41,6 +41,7 @@ USER ezeuser
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
 ENTRYPOINT [ \
+    "echo", "$RUNNER_TEMP", "&&", \
     "mkdir", "/eze_tmp", "&&", \
     "cp", ".", "/eze_tmp", "&&", \
     "cd", "/eze_tmp", "&&", \
