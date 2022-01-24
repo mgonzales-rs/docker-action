@@ -40,4 +40,4 @@ USER ezeuser
 
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
-ENTRYPOINT [ "sh", "-c", "cd", "/data", "&&", "pwd", "&&", "eze", "test" ]
+ENTRYPOINT [ "sh", "-c", "cd", "/data", "&&", "pwd", "&&", "eze", "test", "&&", "echo", "1" ]
