@@ -41,7 +41,7 @@ USER ezeuser
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
 ENTRYPOINT [ \
-    "mkdir", "/home/runner/work/_temp/repo_copy", "&&", \
-    "cp", ".", "/home/runner/work/_temp/repo_copy", "&&", \
-    "cd", "/home/runner/work/_temp/repo_copy", "&&", \
+    "mkdir", "/tmp", "&&", \
+    "cp", ".", "/tmp", "&&", \
+    "cd", "/tmp", "&&", \
     "eze", "test" ]
