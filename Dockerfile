@@ -4,10 +4,6 @@
 FROM riversafe/eze-cli:latest
 
 #
-# set Work Dir
-WORKDIR /data
-
-#
 # create app user
 RUN mkdir -p /data
 
