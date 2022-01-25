@@ -7,6 +7,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
     name: Running workflow
     steps:
       - name: Checkout repository code
@@ -19,4 +21,11 @@ jobs:
         with:
           repo-token: 'first_arg_val'
           pr-message: 'second_arg_val'
-          # repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          # Path to SARIF file relative to the root of the repository
+          sarif_file: eze_report.sarif
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: my-analysis-tool
