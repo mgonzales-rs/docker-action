@@ -30,13 +30,11 @@ WORKDIR /data
 USER root
 
 RUN mkdir -p /data
-RUN chown ezeuser /data
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 # Change User
-USER ezeuser
 
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"

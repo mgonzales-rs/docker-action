@@ -63,7 +63,6 @@ tools = ["python-piprot", "python-bandit", "python-safety", "python-cyclonedx", 
 reporters = ["console"]
 
 [scan.github]
-tools = ["python-piprot", "python-bandit", "python-safety", "python-cyclonedx", "trufflehog"]
 reporters = ["sarif"]
 
 [scan.linux]
