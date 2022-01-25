@@ -29,8 +29,9 @@ WORKDIR /data
 # RUN chown ezeuser /data/test-remote
 USER root
 
-RUN mkdir -p /data/reports
-RUN chown ezeuser /data/reports
+RUN mkdir -p /data
+RUN chown ezeuser /data
+RUN chmod +x /entrypoint.sh
 
 COPY . /data
 COPY entrypoint.sh /entrypoint.sh
