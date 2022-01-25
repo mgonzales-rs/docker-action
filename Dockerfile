@@ -35,7 +35,6 @@ RUN chown ezeuser /data
 COPY . /data
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-RUN ls .
 
 # Change User
 USER ezeuser

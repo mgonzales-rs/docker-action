@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-cp . /data
+cp -r . /data
 cd /data
 eze test -s github
