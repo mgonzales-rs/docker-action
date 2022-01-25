@@ -31,10 +31,10 @@ USER root
 
 RUN mkdir -p /data
 RUN chown ezeuser /data
-RUN chmod +x /entrypoint.sh
 
 COPY . /data
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 RUN ls .
 
 # Change User
