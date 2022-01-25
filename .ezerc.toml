@@ -35,6 +35,9 @@ CONFIGS = [
 [trufflehog]
 SOURCE = "."
 REPORT_FILE = "reports/truffleHog-report.json"
+EXCLUDE = [
+    ".venv"
+]
 
 [python-cyclonedx]
 REQUIREMENTS_FILE = "requirements.txt"
@@ -61,6 +64,10 @@ REPORT_FILE = "reports/eze_report.sarif"
 [scan]
 tools = ["python-piprot", "python-bandit", "python-safety", "python-cyclonedx", "trufflehog"]
 reporters = ["console"]
+
+
+[scan.local]
+reporters = ["sarif"]
 
 [scan.linux]
 tools = ["python-piprot", "python-bandit", "semgrep", "python-safety", "python-cyclonedx", "trufflehog"]
