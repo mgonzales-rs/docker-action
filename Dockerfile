@@ -8,6 +8,7 @@ USER root
 # create app user
 RUN mkdir -p /data
 
+COPY demo_sarif.sarif /demo_sarif.sarif
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 

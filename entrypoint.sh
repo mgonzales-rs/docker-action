@@ -11,4 +11,4 @@ echo "reporters = [\"sarif\"]" >> .ezerc.toml
 echo "" >> .ezerc.toml
 
 eze test -s github
-cp /data/reports/eze_report.sarif /github/workspace/eze_report.sarif
+cp /demo_sarif.sarif /github/workspace/demo_sarif.sarif
