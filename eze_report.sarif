@@ -1,0 +1,201 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "trufflehog",
+          "version": "unknown",
+          "fullName": "SECRET:trufflehog",
+          "informationUri": "https://pypi.org/project/truffleHog3/",
+          "rules": [
+            {
+              "id": "f2232cbd-42aa-4980-aaf0-a16a21b98251",
+              "name": "Found Hardcoded 'High Entropy' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 20 for 'High Entropy' strings Full Match:                 \"text\": \"Found Hardcoded 'High Entropy' Pattern in main.py. Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+              }
+            },
+            {
+              "id": "76bf2d18-3180-4d20-8f5e-80b0f1dad24a",
+              "name": "Found Hardcoded 'High Entropy' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 42 for 'High Entropy' strings Full Match:             \"text\": \"Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+              }
+            },
+            {
+              "id": "a1d0194f-4b09-4499-ace7-5ee515ec603d",
+              "name": "Found Hardcoded 'High Entropy' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in main.py"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in main.py. Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\""
+              }
+            },
+            {
+              "id": "8102c9f2-b135-45f6-b7b4-a72bbe0b373a",
+              "name": "Found Hardcoded 'Password in URL' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 30 for 'Password in URL' strings Full Match:                 \"text\": \"Found Hardcoded 'Password in URL' Pattern in main.py. Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+              }
+            },
+            {
+              "id": "e29dce8f-8889-4d91-bca4-07fa4ef518e5",
+              "name": "Found Hardcoded 'Password in URL' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 62 for 'Password in URL' strings Full Match:             \"text\": \"Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+              }
+            },
+            {
+              "id": "ea1b94f4-bbaf-4769-a34f-a7d02ed7fc22",
+              "name": "Found Hardcoded 'Password in URL' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in main.py"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in main.py. Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \"https://admin:god@hackers.com\""
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "f2232cbd-42aa-4980-aaf0-a16a21b98251",
+          "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 20 for 'High Entropy' strings Full Match:                 \"text\": \"Found Hardcoded 'High Entropy' Pattern in main.py. Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "76bf2d18-3180-4d20-8f5e-80b0f1dad24a",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 42 for 'High Entropy' strings Full Match:             \"text\": \"Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 42
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "a1d0194f-4b09-4499-ace7-5ee515ec603d",
+          "ruleIndex": 2,
+          "level": "error",
+          "message": {
+            "text": "Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "main.py"
+                },
+                "region": {
+                  "startLine": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "8102c9f2-b135-45f6-b7b4-a72bbe0b373a",
+          "ruleIndex": 3,
+          "level": "note",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 30 for 'Password in URL' strings Full Match:                 \"text\": \"Found Hardcoded 'Password in URL' Pattern in main.py. Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "e29dce8f-8889-4d91-bca4-07fa4ef518e5",
+          "ruleIndex": 4,
+          "level": "note",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 62 for 'Password in URL' strings Full Match:             \"text\": \"Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 62
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "ea1b94f4-bbaf-4769-a34f-a7d02ed7fc22",
+          "ruleIndex": 5,
+          "level": "note",
+          "message": {
+            "text": "Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \"https://admin:god@hackers.com\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "main.py"
+                },
+                "region": {
+                  "startLine": 5
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "taxonomies": []
+    }
+  ]
+}
