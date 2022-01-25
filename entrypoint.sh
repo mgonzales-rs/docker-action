@@ -9,7 +9,7 @@ echo "[sarif.github]" >> .ezerc.toml
 echo "REPORT_FILE = \"reports/$INPUT_SARIF_FILE\"" >> .ezerc.toml
 echo "" >> .ezerc.toml
 echo "[scan.github]" >> .ezerc.toml
-echo "reporters = [\"sarif_github\"]" >> .ezerc.toml
+echo "reporters = [\"sarif:github\"]" >> .ezerc.toml
 echo "" >> .ezerc.toml
 
 cat .ezerc.toml
