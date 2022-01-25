@@ -33,6 +33,7 @@ RUN mkdir -p /data/reports
 RUN chown ezeuser /data/reports
 
 COPY . /data
+COPY entrypoint.sh /entrypoint.sh
 RUN ls .
 
 # Change User
@@ -40,4 +41,4 @@ USER ezeuser
 
 # cli eze
 # run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
-ENTRYPOINT [ "entrypoint.sh"]
+ENTRYPOINT [ "/entrypoint.sh"]
