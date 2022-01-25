@@ -5,11 +5,11 @@ cd /data
 
 echo "" >> .ezerc.toml
 echo "" >> .ezerc.toml
-echo "[sarif.github]" >> .ezerc.toml
+echo "[sarif:github]" >> .ezerc.toml
 echo "REPORT_FILE = \"reports/$INPUT_SARIF_FILE\"" >> .ezerc.toml
 echo "" >> .ezerc.toml
 echo "[scan.github]" >> .ezerc.toml
-echo "reporters = [\"sarif.github\"]" >> .ezerc.toml
+echo "reporters = [\"sarif\"]" >> .ezerc.toml
 echo "" >> .ezerc.toml
 
 cat .ezerc.toml
