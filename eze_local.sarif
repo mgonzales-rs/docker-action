@@ -8,10 +8,29 @@
           "name": "trufflehog",
           "version": "unknown",
           "fullName": "SECRET:trufflehog",
-          "informationUri": null,
           "rules": [
             {
-              "id": "c35dde4f-eccb-49bb-94fa-700fe1ced8a5",
+              "id": "4a7dcfe3-d716-477f-a1e2-90728de63307",
+              "name": "Found Hardcoded 'High Entropy' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 20 for 'High Entropy' strings Full Match:                 \"text\": \"Found Hardcoded 'High Entropy' Pattern in main.py. Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+              }
+            },
+            {
+              "id": "8cfeb304-6332-43ad-b5e5-06602a1ef375",
+              "name": "Found Hardcoded 'High Entropy' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'High Entropy' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 42 for 'High Entropy' strings Full Match:             \"text\": \"Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+              }
+            },
+            {
+              "id": "08bcbd55-18f1-4e08-9a2b-73a49d25b24b",
               "name": "Found Hardcoded 'High Entropy' Pattern",
               "shortDescription": {
                 "text": "Found Hardcoded 'High Entropy' Pattern in main.py"
@@ -21,7 +40,27 @@
               }
             },
             {
-              "id": "c8cdbd6e-1ecb-4feb-92fc-fc620feb2f77",
+              "id": "e30d1de3-6e77-48a5-9446-a85db50bb8bb",
+              "name": "Found Hardcoded 'Password in URL' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 30 for 'Password in URL' strings Full Match:                 \"text\": \"Found Hardcoded 'Password in URL' Pattern in main.py. Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+              }
+            },
+            {
+              "id": "1236c249-8e47-405f-9cf0-5f8f8ff96d76",
+              "name": "Found Hardcoded 'Password in URL' Pattern",
+              "shortDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif"
+              },
+              "fullDescription": {
+                "text": "Found Hardcoded 'Password in URL' Pattern in eze_local.sarif. Investigate 'eze_local.sarif' Line 62 for 'Password in URL' strings Full Match:             \"text\": \"Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+              }
+            },
+            {
+              "id": "5677cbf8-9ace-411a-8d77-f9ec60038e26",
               "name": "Found Hardcoded 'Password in URL' Pattern",
               "shortDescription": {
                 "text": "Found Hardcoded 'Password in URL' Pattern in main.py"
@@ -35,8 +74,48 @@
       },
       "results": [
         {
-          "ruleId": "c35dde4f-eccb-49bb-94fa-700fe1ced8a5",
+          "ruleId": "4a7dcfe3-d716-477f-a1e2-90728de63307",
           "ruleIndex": 0,
+          "level": "error",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 20 for 'High Entropy' strings Full Match:                 \"text\": \"Found Hardcoded 'High Entropy' Pattern in main.py. Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 20
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "8cfeb304-6332-43ad-b5e5-06602a1ef375",
+          "ruleIndex": 1,
+          "level": "error",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 42 for 'High Entropy' strings Full Match:             \"text\": \"Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \\\"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 42
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "08bcbd55-18f1-4e08-9a2b-73a49d25b24b",
+          "ruleIndex": 2,
           "level": "error",
           "message": {
             "text": "Investigate 'main.py' Line 3 for 'High Entropy' strings Full Match: INSECURE_SECRET_RSA_KEY = \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAp0A7aEqG42y0q22yU+dLFMrlVhnk2C94QChUwZv0pKmEvySmzSGSY2gSMfarHjpKcW8OKZ5bcmgkZZ3sRkLJSUwYui/pZxOkUIKZ/sUsFDrW4souGPLfP1ziX/Rj0x+MXj7et/cKO5GwqanXrULssdXapaTz4W+OmMkSpPjtDC2lbfTuOL7lYE1cfbluoPcxvU2kw0ZIGFqOCFar2It33Xsie1C+//qIX3QWjJAvYF0ZF+OR\""
@@ -55,8 +134,48 @@
           ]
         },
         {
-          "ruleId": "c8cdbd6e-1ecb-4feb-92fc-fc620feb2f77",
-          "ruleIndex": 1,
+          "ruleId": "e30d1de3-6e77-48a5-9446-a85db50bb8bb",
+          "ruleIndex": 3,
+          "level": "note",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 30 for 'Password in URL' strings Full Match:                 \"text\": \"Found Hardcoded 'Password in URL' Pattern in main.py. Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "1236c249-8e47-405f-9cf0-5f8f8ff96d76",
+          "ruleIndex": 4,
+          "level": "note",
+          "message": {
+            "text": "Investigate 'eze_local.sarif' Line 62 for 'Password in URL' strings Full Match:             \"text\": \"Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \\\"https://admin:god@hackers.com\\\"\""
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "eze_local.sarif"
+                },
+                "region": {
+                  "startLine": 62
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "5677cbf8-9ace-411a-8d77-f9ec60038e26",
+          "ruleIndex": 5,
           "level": "note",
           "message": {
             "text": "Investigate 'main.py' Line 5 for 'Password in URL' strings Full Match: INSECURE_URL_WITH_HARDCODED_BASIC_AUTH = \"https://admin:god@hackers.com\""
