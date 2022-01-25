@@ -10,4 +10,4 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-working-directory: /data/reports
+working-directory: /data

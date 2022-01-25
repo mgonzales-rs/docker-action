@@ -32,7 +32,7 @@ USER root
 RUN mkdir -p /data/reports
 RUN chown ezeuser /data/reports
 
-COPY . .
+COPY . /data
 RUN ls .
 
 # Change User
