@@ -13,9 +13,6 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-      - name: Print something
-        run: |
-          echo "Executing in repository `${{ github.repository }}`"
       # - name: "Running Dockerfile"
       #   uses: ./
       #   with:
