@@ -10,3 +10,4 @@ echo "[scan.github]" >> .ezerc.toml
 echo "reporters = [\"sarif\"]" >> .ezerc.toml
 cat .ezerc.toml
 eze test -s github
+cat /data/reports/eze_report.sarif
