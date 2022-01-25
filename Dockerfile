@@ -32,7 +32,6 @@ USER root
 RUN mkdir -p /data
 RUN chown ezeuser /data
 
-COPY . /data
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
