@@ -10,5 +10,7 @@ echo "[scan.github]" >> .ezerc.toml
 echo "reporters = [\"sarif\"]" >> .ezerc.toml
 echo "" >> .ezerc.toml
 
+cat .ezerc.toml
+
 eze test -s github
 cp reports/$INPUT_SARIF_FILE /github/workspace/$INPUT_SARIF_FILE
