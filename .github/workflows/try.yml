@@ -16,7 +16,6 @@ jobs:
           echo "Executing in repository `${{ github.repository }}`"
       - name: "Running Dockerfile"
         uses: ./
-        working-directory: ./temp
         with:
           repo-token: 'first_arg_val'
           pr-message: 'second_arg_val'
