@@ -5,20 +5,14 @@ on:
   pull_request: {branches: main}
 
 jobs:
-  checkout:
+  eze-test:
     runs-on: ubuntu-latest
+    permissions:
+      security-events: write
     name: Preparing workflow
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-     
-  test:
-    needs: checkout
-    runs-on: ubuntu-latest
-    permissions:
-      security-events: write
-    name: Eze test
-    steps:
       # - name: "Running Dockerfile"
       #   uses: ./
       #   with:
