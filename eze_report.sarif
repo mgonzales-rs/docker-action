@@ -9,10 +9,10 @@
           "version": "unknown",
           "fullName": "SCA:python-piprot",
           "informationUri": "https://pypi.org/project/piprot/",
-          "rules": {}
+          "rules": []
         }
       },
-      "results": {},
+      "results": [],
       "taxonomies": []
     },
     {
@@ -22,10 +22,10 @@
           "version": "unknown",
           "fullName": "SAST:python-bandit",
           "informationUri": "https://bandit.readthedocs.io/en/latest/",
-          "rules": {}
+          "rules": []
         }
       },
-      "results": {},
+      "results": [],
       "taxonomies": []
     },
     {
@@ -35,10 +35,10 @@
           "version": "unknown",
           "fullName": "SAST:python-safety",
           "informationUri": "https://pypi.org/project/safety/",
-          "rules": {}
+          "rules": []
         }
       },
-      "results": {},
+      "results": [],
       "taxonomies": []
     },
     {
@@ -48,10 +48,10 @@
           "version": "unknown",
           "fullName": "SBOM:python-cyclonedx",
           "informationUri": "https://cyclonedx.org/",
-          "rules": {}
+          "rules": []
         }
       },
-      "results": {},
+      "results": [],
       "taxonomies": []
     },
     {
@@ -61,10 +61,10 @@
           "version": "unknown",
           "fullName": "SECRET:trufflehog",
           "informationUri": "https://pypi.org/project/truffleHog3/",
-          "rules": {}
+          "rules": []
         }
       },
-      "results": {},
+      "results": [],
       "taxonomies": []
     }
   ]
