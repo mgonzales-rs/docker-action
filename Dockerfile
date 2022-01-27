@@ -3,6 +3,7 @@
 # base image
 FROM riversafe/eze-cli:latest
 
+VOLUME /github/workspace
 USER root
 #
 # create app user
