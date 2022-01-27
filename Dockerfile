@@ -8,7 +8,7 @@ USER root
 #
 # create app user
 RUN chmod a+w /data
-RUN mkdir /github/workspace
+RUN mkdir -p /github/workspace
 RUN chmod a+w /github/workspace
 
 # COPY demo_sarif.sarif /demo_sarif.sarif
