@@ -3,14 +3,13 @@
 # base image
 FROM riversafe/eze-cli:latest
 
-ENV INPUT_SARIF_FILE
 
 VOLUME /github/workspace
 USER root
 #
 # create app user
 RUN chmod a+w /data
-RUN chmod a+w /github/workspace/$INPUT_SARIF_FILE
+RUN chmod a+w /github/workspace
 
 # COPY demo_sarif.sarif /demo_sarif.sarif
 COPY entrypoint.sh /entrypoint.sh
