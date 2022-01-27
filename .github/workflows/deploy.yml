@@ -18,10 +18,10 @@ jobs:
         id: eze-test
         with:
           sarif_file: eze
-      - name: Write sarif to workspace file.
-        run: echo '${{ steps.eze-test.outputs.eze.sarif }}' >> eze.sarif
       - name: Show sarif
-        run: cat eze.sarif
+        run: echo "${{ env.sarif_file }}"
+      - name: Write sarif to workspace file.
+        run: echo '${{ env.sarif_file }}' >> eze.sarif
       - name: Upload SARIF report
         uses: github/codeql-action/upload-sarif@v1
         with:
