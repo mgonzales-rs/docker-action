@@ -6,7 +6,7 @@ FROM riversafe/eze-cli:latest
 USER root
 #
 # create app user
-RUN chmod -R +w /data
+RUN chmod +aw /data
 
 # COPY demo_sarif.sarif /demo_sarif.sarif
 COPY entrypoint.sh /entrypoint.sh
