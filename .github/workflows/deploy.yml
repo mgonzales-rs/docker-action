@@ -15,11 +15,13 @@ jobs:
         uses: actions/checkout@v2
       - name: "Running Dockerfile"
         uses: ./
+        id: eze-test
         with:
           sarif_file: eze.sarif
+      - run:  ${{ steps.eze-test.outputs.eze.sarif }}" >> eze.sarif
       - name: Upload SARIF report
         uses: github/codeql-action/upload-sarif@v1
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: eze_report.sarif
+          sarif_file: eze.sarif
           category: my-analysis-tool
