@@ -16,12 +16,10 @@ jobs:
       - name: "Running Dockerfile"
         uses: ./
         id: eze-test
-        with:
-          sarif_file: eze
       - name: Show sarif
         run: echo "${{ steps.eze-test.outputs.sarif_file }}"
       - name: Write sarif to workspace file.
-        run: echo "${{ steps.eze-test.outputs.sarif_file }}" >> eze.sarif
+        run: echo '${{ steps.eze-test.outputs.sarif_file }}' >> eze.sarif
       - name: Show sarif
         run: cat eze.sarif
       - name: Upload SARIF report

@@ -1,10 +1,9 @@
 name: 'Docker YML for Github Action '
 description: 'Running the Dockerfile for Eze testing'
 author: 'riversafe'
-inputs:
+outputs:
   sarif_file:
     description: 'Name to write the sarif-file so that it can be uploaded in the next step'
-    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
