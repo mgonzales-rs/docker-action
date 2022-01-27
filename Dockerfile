@@ -9,12 +9,13 @@ USER root
 # create app user
 RUN chmod a+w /data
 
-# COPY demo_sarif.sarif /demo_sarif.sarif
+# Copy file to handle sarif into the container
 COPY entrypoint.sh /entrypoint.sh
+# Make entrypoint executable
 RUN chmod +x /entrypoint.sh
 
+# Set ezeuser as current user
 USER ezeuser
 
-# cli eze
-# run with "docker run --rm -v $(pwd -W):/data eze-docker --version"
+# Eze test and report in sarif format
 ENTRYPOINT [ "/entrypoint.sh"]

@@ -27,3 +27,5 @@ jobs:
           # Path to SARIF file relative to the root of the repository
           sarif_file: eze.sarif
           category: my-analysis-tool
+      - name: Print duration time
+        run: echo "The time was ${{ steps.eze-test.outputs.time }}"
