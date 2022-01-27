@@ -63,7 +63,7 @@ REPORT_FILE = "reports/eze_report.sarif"
 # ========================================
 [scan]
 tools = ["python-piprot", "python-bandit", "python-safety", "python-cyclonedx", "trufflehog"]
-reporters = ["console"]
+reporters = ["sarif"]
 
 
 [scan.local]
