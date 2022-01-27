@@ -19,8 +19,9 @@ jobs:
       - name: Show sarif
         run: echo "${{ steps.eze-test.outputs.sarif_file }}"
       - name: Write sarif to workspace file.
-        run: echo <<EOT 
-          ${{ steps.eze-test.outputs.sarif_file }}
+        run: |
+        echo <<EOT \
+          ${{ steps.eze-test.outputs.sarif_file }} \
         EOT >> eze.sarif
       - name: Show sarif
         run: cat eze.sarif
