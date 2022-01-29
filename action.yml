@@ -3,7 +3,7 @@ description: 'Running the Dockerfile for Eze testing'
 author: 'riversafe'
 
 inputs:
-  upload_method: 
+  upload-method: 
     description: The method chosen by the user to handle Eze results (1. sarif or 2. markdown)
     required: true
     default: "2"
@@ -13,3 +13,4 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  
