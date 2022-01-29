@@ -2,6 +2,7 @@ name: Eze Github Actions
 
 on:
   push: {branches: main}
+    inputs: 
   pull_request: {branches: main}
 
 jobs:
@@ -15,15 +16,18 @@ jobs:
         uses: actions/checkout@v2
       - name: "Generating SARIF with EZE"
         uses: ./
+        with: 
+          upload_method: ${{ github.event.inputs.method }}
+        echo "Input_text: ${upload_method}"
         id: eze-test
       - name: Write sarif to workspace file.
         run: |
           cat > eze.sarif <<'EOF'
             ${{ steps.eze-test.outputs.sarif_file }}
           EOF
-      - name: Upload SARIF report
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          # Path to SARIF file relative to the root of the repository
-          sarif_file: eze.sarif
-          category: my-analysis-tool
+      # - name: Upload SARIF report
+      #   uses: github/codeql-action/upload-sarif@v1
+      #   with:
+      #     # Path to SARIF file relative to the root of the repository
+      #     sarif_file: eze.sarif
+      #     category: my-analysis-tool
