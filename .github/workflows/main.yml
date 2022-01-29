@@ -18,7 +18,7 @@ jobs:
         uses: ./
         with: 
           upload_method: ${{ github.event.inputs.method }}
-        echo "Input_text: ${upload_method}"
+        echo "Input_text: ${{upload_method}}"
         id: eze-test
       - name: Write sarif to workspace file.
         run: |
