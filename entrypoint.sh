@@ -3,6 +3,7 @@
 cp -r . /data
 cd /data
 
+echo $INPUT_UPLOAD_METHOD
 echo "" >> .ezerc.toml
 echo "" >> .ezerc.toml
 echo "[sarif.github]" >> .ezerc.toml

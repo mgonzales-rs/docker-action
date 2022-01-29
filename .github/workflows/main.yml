@@ -17,8 +17,7 @@ jobs:
       - name: "Generating SARIF with EZE"
         uses: ./
         with: 
-          upload-method: ${{ github.event.inputs.upload-method }}
-        echo "Input_text: ${{upload-method}}"
+          upload_method: markdown
         id: eze-test
       - name: Write sarif to workspace file.
         run: |
