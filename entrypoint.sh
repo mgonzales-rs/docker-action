@@ -3,7 +3,7 @@
 cp -r . /data
 cd /data
 
-if [ $INPUT_UPLOAD_METHOD -eq 1 ]
+if [ $INPUT_UPLOAD_METHOD = "sarif" ]
 then
     echo "printing in SARIF"
 else
