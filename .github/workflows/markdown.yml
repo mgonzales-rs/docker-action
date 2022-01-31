@@ -33,10 +33,11 @@ jobs:
           cat eze.md
       - name: Commit files
         run: |
-          git add eze.md
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Update security report" -a
+          git add eze.md && \
+          git config --local user.email "github-actions[bot]@users.noreply.github.com" && \
+          git config --local user.name "github-actions[bot]" && \
+          git commit -m "Update security report" -a || \
+          echo No diff
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
