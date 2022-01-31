@@ -17,7 +17,7 @@ jobs:
         uses: ./
         with: 
           # Define the value of the upload format (sarif & markdown)
-          upload_method: markdown
+          upload_method: sarif
         id: eze-test
       - name: Write sarif to workspace file.
         run: |
