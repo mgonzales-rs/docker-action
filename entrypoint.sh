@@ -3,7 +3,12 @@
 cp -r . /data
 cd /data
 
-echo $INPUT_UPLOAD_METHOD
+if [ $INPUT_UPLOAD_METHOD -eq 1 ]
+then
+    echo "printing in SARIF"
+else
+    echo "printing in MARKDOWN"
+fi
 echo "" >> .ezerc.toml
 echo "" >> .ezerc.toml
 echo "[sarif.github]" >> .ezerc.toml
