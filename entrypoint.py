@@ -1,6 +1,9 @@
 import os
 
-toml = open(".ezerc.toml", "a")
+
+os.system("cp -r . /data")
+os.chdir("/data")
+toml = open("./.ezerc.toml", "a")
 
 if os.environ.get("INPUT_UPLOAD_METHOD") == "sarif":
     print("ok")
