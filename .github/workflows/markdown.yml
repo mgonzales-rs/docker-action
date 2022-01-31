@@ -21,6 +21,18 @@ jobs:
         id: eze-test
       - name: Write markdown to workspace file.
         run: |
-          cat > eze.markdown_file <<'EOF'
+          cat > eze.md <<'EOF'
+            # El real markdaon
             ${{ steps.eze-test.outputs.markdown_file }}
           EOF
+          cat eze.md
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
