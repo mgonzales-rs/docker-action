@@ -22,7 +22,7 @@ jobs:
       - name: Write markdown to workspace file.
         run: |
           cat > eze.md <<'EOF'
-            # El real markdaon 2
+            # El real markdaon 3
             ${{ steps.eze-test.outputs.markdown_file }}
           EOF
           cat eze.md
