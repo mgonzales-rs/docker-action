@@ -1,4 +1,4 @@
-name: Eze Github Actions
+name: Eze Github Actions Markdown
 
 on:
   push: {branches: main}

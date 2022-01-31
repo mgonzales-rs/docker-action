@@ -1,4 +1,4 @@
-name: Eze Github Actions
+name: Eze Github Actions Sarif
 
 on:
   push: {branches: main}
