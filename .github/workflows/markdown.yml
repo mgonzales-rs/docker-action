@@ -8,7 +8,7 @@ jobs:
   eze-test:
     runs-on: ubuntu-latest
     permissions:
-      security-events: write
+      contents: write
     name: Eze Security Test
     steps:
       - name: Checkout repository code
@@ -19,14 +19,8 @@ jobs:
           # Define the value of the upload format (sarif & markdown)
           upload_method: markdown
         id: eze-test
-      - name: Write sarif to workspace file.
+      - name: Write markdown to workspace file.
         run: |
-          cat > eze.sarif <<'EOF'
-            ${{ steps.eze-test.outputs.sarif_file }}
+          cat > eze.markdown_file <<'EOF'
+            ${{ steps.eze-test.outputs.markdown_file }}
           EOF
-      # - name: Upload SARIF report
-      #   uses: github/codeql-action/upload-sarif@v1
-      #   with:
-      #     # Path to SARIF file relative to the root of the repository
-      #     sarif_file: eze.sarif
-      #     category: my-analysis-tool
