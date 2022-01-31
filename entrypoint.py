@@ -45,5 +45,5 @@ else:
     toml.close()
     os.system("eze test -s github")
     markdown = file_object = open("reports/eze.md", "r")
-    content = replace_special_chararacters("\n".join(markdown.readlines()))
+    content = replace_special_chararacters("".join(markdown.readlines()))
     print(f"::set-output name=markdown_file::{content}")
