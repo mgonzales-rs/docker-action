@@ -27,7 +27,7 @@ else
     echo "" >> .ezerc.toml
     eze test -s github
     FILE_CONTENT=$(cat reports/eze.md)
-    FILE_CONTENT="${FILE_CONTENT//'%'/'%25'}"
+    # FILE_CONTENT="${FILE_CONTENT//'%'/'%25'}"
     FILE_CONTENT="${FILE_CONTENT//$'\n'/'%0A'}"
     FILE_CONTENT="${FILE_CONTENT//$'\r'/'%0D'}"
     echo ::set-output name=markdown_file::$FILE_CONTENT
