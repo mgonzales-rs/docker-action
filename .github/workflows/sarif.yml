@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-      - name: "Generating SARIF with EZE"
-        uses: ./
-        with: 
-          # Define the value of the upload format (sarif & markdown)
-          upload_method: sarif
-        id: eze-test
+      # - name: "Generating SARIF with EZE"
+      #   uses: ./
+      #   with: 
+      #     # Define the value of the upload format (sarif & markdown)
+      #     upload_method: sarif
+      #   id: eze-test
       # - name: Write sarif to workspace file.
       #   run: |
       #     cat > eze.sarif <<'EOF'
