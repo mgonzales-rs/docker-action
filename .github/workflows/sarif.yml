@@ -31,7 +31,6 @@ jobs:
           # Path to SARIF file relative to the root of the repository
           sarif_file: eze.sarif
           category: my-analysis-tool
-            - name: Upload SARIF report
       - name: Print report
         run: |
           cat > eze.sarif <<'EOF'
