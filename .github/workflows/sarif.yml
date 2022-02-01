@@ -33,4 +33,4 @@ jobs:
           category: my-analysis-tool
       - name: Print report
         run: |
-          cat > eze.sarif <<'EOF'
+          cat eze.sarif
