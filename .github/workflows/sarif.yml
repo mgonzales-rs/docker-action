@@ -8,7 +8,7 @@ jobs:
   eze-test:
     runs-on: ubuntu-latest
     permissions:
-      security-events: write, read
+      security-events: write
       contents: read
     name: Eze Security Test
     steps:
