@@ -4,12 +4,11 @@ on:
   push: 
     branches: 
       - main
-      inputs: 
-        allowed_to_push:
-          description: 'Flag to indicate if the action is allowed to push the markdown report into your repo'
-          required: false
-          type: string
-
+        inputs: 
+          allowed_to_push:
+            description: 'Flag to indicate if the action is allowed to push the markdown report into your repo'
+            required: false
+            type: string
 
 jobs:
   eze-test:
