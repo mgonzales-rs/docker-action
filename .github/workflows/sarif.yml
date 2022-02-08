@@ -1,8 +1,10 @@
 name: Eze Github Actions Sarif
 
 on:
+  # to run on push events to the main branch
   push: {branches: main}
-  pull_request: {branches: main}
+  # to run on pull_request events that target the main branch
+  pull_request: {branches: main} 
 
 jobs:
   eze-test:
@@ -14,17 +16,17 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-      # - name: "Generating SARIF with EZE"
-      #   uses: ./
-      #   with: 
-      #     # Define the value of the upload format (sarif & markdown)
-      #     upload_method: sarif
-      #   id: eze-test
-      # - name: Write sarif to workspace file.
-      #   run: |
-      #     cat > eze.sarif <<'EOF'
-      #       ${{ steps.eze-test.outputs.sarif_file }}
-      #     EOF
+      - name: "Generating SARIF with EZE"
+        uses: ./
+        with: 
+          # Define the value of the upload format (sarif & markdown)
+          upload_method: sarif
+        id: eze-test
+      - name: Write sarif to workspace file.
+        run: |
+          cat > eze.sarif <<'EOF'
+            ${{ steps.eze-test.outputs.sarif_file }}
+          EOF
       - name: Upload SARIF report
         uses: github/codeql-action/upload-sarif@v1
         with:
