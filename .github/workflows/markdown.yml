@@ -33,7 +33,7 @@ jobs:
           cat eze.md
       
       - name: Results 
-        if: ${{ github.event.inputs.allowed_to_push != 'true' }}
+        if: ${{ github.event.inputs.allowed_to_push != true }}
         run: |
           echo "No commit nor push will be made into your repo"
 
