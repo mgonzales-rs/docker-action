@@ -1,11 +1,7 @@
-name: Eze Github Actions Markdown
+name: Eze Github Actions for Markdown
 
 on:
   push: 
-    branches: 
-      - main
-      - develop
-  pull_request: 
     branches: 
       - main
 
@@ -18,10 +14,9 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v2
-      - name: "Generating SARIF with EZE"
+      - name: Testing with Eze - markdown
         uses: ./
         with: 
-          # Define the value of the upload format (sarif & markdown)
           upload_method: markdown
         id: eze-test
       - name: Write markdown to workspace file.
@@ -33,11 +28,18 @@ jobs:
       - name: Commit files
         run: |
           git add eze.md && \
-          git config --local user.email "github-actions[bot]@users.noreply.github.com" && \
-          git config --local user.name "github-actions[bot]" && \
+          git config --local user.email "eze-github-action@users.noreply.github.com" && \
+          git config --local user.name "eze-action" && \
           git commit -m "Update security report" -a || \
           echo No diff
+
       - name: Push changes
+        if: ${{ github.event.inputs.allowed_to_push }}
         uses: ad-m/github-push-action@master
         with:
           branch: ${{ github.ref }}
+
+      - name: Show no changes
+        if: ${{ github.event.inputs.allowed_to_push != 'true' }}
+        run: |
+          echo "No push will be made into your repo"
