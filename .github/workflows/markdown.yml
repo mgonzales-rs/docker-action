@@ -8,7 +8,7 @@ on:
       allowed_to_push:
         description: 'Flag to indicate if the action is allowed to push the markdown report into your repo'
         required: false
-        default: 'true' 
+        default: true 
         type: string
 
 jobs:
